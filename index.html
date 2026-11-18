@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cadastro de Diretoria / Área</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Cadastro de Diretoria / Área</h1>
+  <p>Escolha o nome da pessoa e defina a área dela.</p>
+</header>
+
+<main>
+  <section class="card">
+    <h2>Novo cadastro</h2>
+    <div class="form">
+      <div>
+        <label for="selNome">Nome</label>
+        <select id="selNome"></select>
+      </div>
+      <div>
+        <label for="selArea">Diretoria / Área</label>
+        <select id="selArea"></select>
+      </div>
+      <button id="btnSalvar">Cadastrar</button>
+    </div>
+    <div class="msg" id="msg"></div>
+  </section>
+
+  <section class="card">
+    <h2>Resumo por área</h2>
+    <div class="stats" id="stats"></div>
+  </section>
+
+  <section class="card">
+    <h2>Cadastros</h2>
+    <div class="tools">
+      <input type="text" id="busca" placeholder="Buscar por nome...">
+      <button class="sec" id="btnCsv">Exportar CSV</button>
+      <button class="sec" id="btnLimpar">Limpar áreas</button>
+    </div>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>#</th><th>Nome</th><th>Área</th><th>Alterar área</th><th></th></tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
